@@ -3,14 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		95C0546ED26C3919CD2CB667 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5B6BD77AEF4A3F2132C86D /* Pods_MovieApp.framework */; };
+		B59972F02663E8BF0097E836 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59972EF2663E8BF0097E836 /* GoogleService-Info.plist */; };
+		B59972F32663E8CB0097E836 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59972F22663E8CB0097E836 /* Config.swift */; };
+		B59973092663EAF10097E836 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59973082663EAF10097E836 /* SplashViewController.swift */; };
+		B599734F2663FCD00097E836 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599734E2663FCD00097E836 /* MainViewController.swift */; };
+		B5997361266401160097E836 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5997360266401160097E836 /* RemoteConfigDefaults.plist */; };
+		B5997375266417370097E836 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5997374266417370097E836 /* Reach.swift */; };
 		B5A72E3D2663B1B3006B4578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A72E3C2663B1B3006B4578 /* AppDelegate.swift */; };
-		B5A72E3F2663B1B3006B4578 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A72E3E2663B1B3006B4578 /* SceneDelegate.swift */; };
-		B5A72E412663B1B3006B4578 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A72E402663B1B3006B4578 /* ViewController.swift */; };
 		B5A72E442663B1B3006B4578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A72E422663B1B3006B4578 /* Main.storyboard */; };
 		B5A72E462663B1B5006B4578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A72E452663B1B5006B4578 /* Assets.xcassets */; };
 		B5A72E492663B1B5006B4578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A72E472663B1B5006B4578 /* LaunchScreen.storyboard */; };
@@ -19,10 +23,14 @@
 /* Begin PBXFileReference section */
 		4A5B6BD77AEF4A3F2132C86D /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66BF182B07CFB1501AD9A188 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B59972EF2663E8BF0097E836 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B59972F22663E8CB0097E836 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B59973082663EAF10097E836 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B599734E2663FCD00097E836 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B5997360266401160097E836 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		B5997374266417370097E836 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		B5A72E392663B1B3006B4578 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A72E3C2663B1B3006B4578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5A72E3E2663B1B3006B4578 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B5A72E402663B1B3006B4578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5A72E432663B1B3006B4578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5A72E452663B1B5006B4578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5A72E482663B1B5006B4578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,8 +56,34 @@
 				66BF182B07CFB1501AD9A188 /* Pods-MovieApp.debug.xcconfig */,
 				F6E7AA15CACB572B654F0357 /* Pods-MovieApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B59972ED2663E88A0097E836 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B59972EF2663E8BF0097E836 /* GoogleService-Info.plist */,
+				B5997360266401160097E836 /* RemoteConfigDefaults.plist */,
+				B59972F22663E8CB0097E836 /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B59972EE2663E8A70097E836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B59973082663EAF10097E836 /* SplashViewController.swift */,
+				B599734E2663FCD00097E836 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B5997373266417270097E836 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B5997374266417370097E836 /* Reach.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B5A72E302663B1B3006B4578 = {
@@ -73,9 +107,10 @@
 		B5A72E3B2663B1B3006B4578 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				B5997373266417270097E836 /* Helpers */,
+				B59972EE2663E8A70097E836 /* Controller */,
+				B59972ED2663E88A0097E836 /* Config */,
 				B5A72E3C2663B1B3006B4578 /* AppDelegate.swift */,
-				B5A72E3E2663B1B3006B4578 /* SceneDelegate.swift */,
-				B5A72E402663B1B3006B4578 /* ViewController.swift */,
 				B5A72E422663B1B3006B4578 /* Main.storyboard */,
 				B5A72E452663B1B5006B4578 /* Assets.xcassets */,
 				B5A72E472663B1B5006B4578 /* LaunchScreen.storyboard */,
@@ -152,6 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5A72E492663B1B5006B4578 /* LaunchScreen.storyboard in Resources */,
+				B5997361266401160097E836 /* RemoteConfigDefaults.plist in Resources */,
+				B59972F02663E8BF0097E836 /* GoogleService-Info.plist in Resources */,
 				B5A72E462663B1B5006B4578 /* Assets.xcassets in Resources */,
 				B5A72E442663B1B3006B4578 /* Main.storyboard in Resources */,
 			);
@@ -206,9 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5A72E412663B1B3006B4578 /* ViewController.swift in Sources */,
+				B59973092663EAF10097E836 /* SplashViewController.swift in Sources */,
 				B5A72E3D2663B1B3006B4578 /* AppDelegate.swift in Sources */,
-				B5A72E3F2663B1B3006B4578 /* SceneDelegate.swift in Sources */,
+				B5997375266417370097E836 /* Reach.swift in Sources */,
+				B59972F32663E8CB0097E836 /* Config.swift in Sources */,
+				B599734F2663FCD00097E836 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,14 +398,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67ANTJMF7U;
 				INFOPLIST_FILE = MovieApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = selinkaplan.MovieApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selinkaplan.movieapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -379,14 +419,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67ANTJMF7U;
 				INFOPLIST_FILE = MovieApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = selinkaplan.MovieApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selinkaplan.movieapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

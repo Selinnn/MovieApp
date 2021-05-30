@@ -6,6 +6,8 @@ target 'MovieApp' do
   use_frameworks!
 
   pod 'Firebase'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig'
   # Pods for MovieApp
 
 end

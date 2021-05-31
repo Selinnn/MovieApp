@@ -6,5 +6,7 @@
 	<string></string>
 	<key>SPLASH_TEXT</key>
 	<string></string>
+	<key>API_KEY</key>
+	<string>e2d0f062</string>
 </dict>
 </plist>

@@ -39,8 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Config fetched!")
                 RemoteConfig.remoteConfig().activate(completion: { (result,error) in
                     DispatchQueue.main.async {
-                    Config.API_URL = self.remoteConfig["API_URL"].stringValue ?? ""
-                    Config.SPLASH_TEXT = self.remoteConfig["SPLASH_TEXT"].stringValue ?? ""
+                        Config.API_URL = self.remoteConfig["API_URL"].stringValue ?? ""
+                        Config.API_KEY = self.remoteConfig["API_KEY"].stringValue ?? ""
+                        Config.SPLASH_TEXT = self.remoteConfig["SPLASH_TEXT"].stringValue ?? ""
                     }
                     
                     self.showMain()

@@ -1,5 +1,5 @@
 //
-//  SplashViewController.swift
+//  SplashVC.swift
 //  MovieApp
 //
 //  Created by Selin KAPLAN on 30.05.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class SplashVC: UIViewController {
     
     @IBOutlet weak var splashLabel: UILabel!
     
@@ -33,7 +33,7 @@ class SplashViewController: UIViewController {
     
     func goMainVC() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainVC") as! MainVC
         newViewController.modalPresentationStyle = .fullScreen
         self.present(newViewController, animated: true, completion: nil)
     }

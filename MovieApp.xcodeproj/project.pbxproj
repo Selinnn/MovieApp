@@ -10,10 +10,16 @@
 		95C0546ED26C3919CD2CB667 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5B6BD77AEF4A3F2132C86D /* Pods_MovieApp.framework */; };
 		B59972F02663E8BF0097E836 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59972EF2663E8BF0097E836 /* GoogleService-Info.plist */; };
 		B59972F32663E8CB0097E836 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59972F22663E8CB0097E836 /* Config.swift */; };
-		B59973092663EAF10097E836 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59973082663EAF10097E836 /* SplashViewController.swift */; };
-		B599734F2663FCD00097E836 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599734E2663FCD00097E836 /* MainViewController.swift */; };
+		B59973092663EAF10097E836 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59973082663EAF10097E836 /* SplashVC.swift */; };
+		B599734F2663FCD00097E836 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599734E2663FCD00097E836 /* MainVC.swift */; };
 		B5997361266401160097E836 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5997360266401160097E836 /* RemoteConfigDefaults.plist */; };
 		B5997375266417370097E836 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5997374266417370097E836 /* Reach.swift */; };
+		B5997388266420800097E836 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5997387266420800097E836 /* APIRequest.swift */; };
+		B599739A266420D60097E836 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5997399266420D60097E836 /* Movie.swift */; };
+		B599739E2664CB5B0097E836 /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599739D2664CB5A0097E836 /* MovieDetailVC.swift */; };
+		B59973A32664E7D80097E836 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59973A22664E7D80097E836 /* MovieModel.swift */; };
+		B59973A72664E8460097E836 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59973A62664E8460097E836 /* MovieViewModel.swift */; };
+		B59973AB2664ECFD0097E836 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59973AA2664ECFD0097E836 /* MovieCell.swift */; };
 		B5A72E3D2663B1B3006B4578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A72E3C2663B1B3006B4578 /* AppDelegate.swift */; };
 		B5A72E442663B1B3006B4578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A72E422663B1B3006B4578 /* Main.storyboard */; };
 		B5A72E462663B1B5006B4578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A72E452663B1B5006B4578 /* Assets.xcassets */; };
@@ -25,10 +31,16 @@
 		66BF182B07CFB1501AD9A188 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B59972EF2663E8BF0097E836 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B59972F22663E8CB0097E836 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		B59973082663EAF10097E836 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		B599734E2663FCD00097E836 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B59973082663EAF10097E836 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		B599734E2663FCD00097E836 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B5997360266401160097E836 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		B5997374266417370097E836 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		B5997387266420800097E836 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		B5997399266420D60097E836 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		B599739D2664CB5A0097E836 /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
+		B59973A22664E7D80097E836 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		B59973A62664E8460097E836 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		B59973AA2664ECFD0097E836 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		B5A72E392663B1B3006B4578 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A72E3C2663B1B3006B4578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5A72E432663B1B3006B4578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,8 +84,9 @@
 		B59972EE2663E8A70097E836 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B59973082663EAF10097E836 /* SplashViewController.swift */,
-				B599734E2663FCD00097E836 /* MainViewController.swift */,
+				B59973082663EAF10097E836 /* SplashVC.swift */,
+				B599734E2663FCD00097E836 /* MainVC.swift */,
+				B599739D2664CB5A0097E836 /* MovieDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -84,6 +97,39 @@
 				B5997374266417370097E836 /* Reach.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B59973862664206E0097E836 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B5997387266420800097E836 /* APIRequest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B5997398266420A90097E836 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5997399266420D60097E836 /* Movie.swift */,
+				B59973A22664E7D80097E836 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B59973A52664E8360097E836 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B59973A62664E8460097E836 /* MovieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B59973A92664ECDF0097E836 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B59973AA2664ECFD0097E836 /* MovieCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5A72E302663B1B3006B4578 = {
@@ -107,6 +153,10 @@
 		B5A72E3B2663B1B3006B4578 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				B59973A92664ECDF0097E836 /* View */,
+				B59973A52664E8360097E836 /* ViewModel */,
+				B5997398266420A90097E836 /* Model */,
+				B59973862664206E0097E836 /* Service */,
 				B5997373266417270097E836 /* Helpers */,
 				B59972EE2663E8A70097E836 /* Controller */,
 				B59972ED2663E88A0097E836 /* Config */,
@@ -243,11 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59973092663EAF10097E836 /* SplashViewController.swift in Sources */,
+				B59973A32664E7D80097E836 /* MovieModel.swift in Sources */,
+				B59973A72664E8460097E836 /* MovieViewModel.swift in Sources */,
+				B599739A266420D60097E836 /* Movie.swift in Sources */,
+				B59973AB2664ECFD0097E836 /* MovieCell.swift in Sources */,
+				B59973092663EAF10097E836 /* SplashVC.swift in Sources */,
+				B599739E2664CB5B0097E836 /* MovieDetailVC.swift in Sources */,
 				B5A72E3D2663B1B3006B4578 /* AppDelegate.swift in Sources */,
 				B5997375266417370097E836 /* Reach.swift in Sources */,
 				B59972F32663E8CB0097E836 /* Config.swift in Sources */,
-				B599734F2663FCD00097E836 /* MainViewController.swift in Sources */,
+				B5997388266420800097E836 /* APIRequest.swift in Sources */,
+				B599734F2663FCD00097E836 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

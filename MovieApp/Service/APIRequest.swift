@@ -22,8 +22,7 @@ struct APIRequest {
         self.resourceURL = resourceURL
     }
     
-    func post (completion: @escaping(Result<Movie, APIError>) -> Void) {
-        
+    func post (completion: @escaping(Result<Data, APIError>) -> Void) {
         do {
           var urlRequest = URLRequest(url: resourceURL)
             urlRequest.httpMethod = "POST"
@@ -35,18 +34,12 @@ struct APIRequest {
                     return
                 }
                 
-                do {
-                    let movieData = try JSONDecoder().decode(Movie.self, from: jsonData)
-                   completion(.success(movieData))
-                }catch {
-                    completion(.failure(.decodingProblem))
-                }
-                
+                completion(.success(jsonData))
             }
             dataTask.resume()
         } catch {
             completion(.failure(.encodingProblem))
         }
     }
-    
+
 }

@@ -8,6 +8,7 @@ target 'MovieApp' do
   pod 'Firebase'
   pod 'Firebase/Analytics'
   pod 'Firebase/RemoteConfig'
+  pod 'SVProgressHUD'
   # Pods for MovieApp
 
 end

@@ -4,11 +4,11 @@
 target 'MovieApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  pod 'Firebase'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/RemoteConfig'
-  pod 'SVProgressHUD'
+     pod 'Firebase'
+     pod 'Firebase/Analytics'
+     pod 'Firebase/RemoteConfig'
+     pod 'SVProgressHUD'
+     pod 'SDWebImage', '~> 5.0'
   # Pods for MovieApp
 
 end

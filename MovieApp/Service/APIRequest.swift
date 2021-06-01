@@ -23,23 +23,21 @@ struct APIRequest {
     }
     
     func post (completion: @escaping(Result<Data, APIError>) -> Void) {
-        do {
-          var urlRequest = URLRequest(url: resourceURL)
-            urlRequest.httpMethod = "POST"
-            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            
-            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, _ in
-                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
-                    completion(.failure(.responseProblem))
-                    return
-                }
-                
-                completion(.success(jsonData))
+        
+        var urlRequest = URLRequest(url: resourceURL)
+        urlRequest.httpMethod = "POST"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, _ in
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                completion(.failure(.responseProblem))
+                return
             }
-            dataTask.resume()
-        } catch {
-            completion(.failure(.encodingProblem))
+            
+            completion(.success(jsonData))
         }
+        dataTask.resume()
+        
     }
-
+    
 }

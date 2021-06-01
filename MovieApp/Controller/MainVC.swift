@@ -41,12 +41,16 @@ class MainVC: UIViewController {
                             SVProgressHUD.dismiss()
                            }
                     }catch {
-                        SVProgressHUD.dismiss()
-                        self.showAlert(message: "Movie not found!")
-                    }
+                        DispatchQueue.main.async {
+                            SVProgressHUD.dismiss()
+                            self.showAlert(message: "Movie not found!")
+                            }
+                        }
                    case .failure(let error):
+                    DispatchQueue.main.async {
                         SVProgressHUD.dismiss()
                         self.showAlert(message: error.localizedDescription)
+                    }
                    }
                })
         searchBtn.isEnabled = true
@@ -66,7 +70,7 @@ class MainVC: UIViewController {
             SVProgressHUD.show()
             searchBtn.isEnabled = false
           let clearString = movieTextField.text!.replacingOccurrences(of: " ", with: "_", options: .literal, range: nil)
-          searchText = clearString
+            searchText = clearString.convertToValidName()
           self.getMovies()
         }else {
             self.showAlert(message: "Please enter the movie name.")

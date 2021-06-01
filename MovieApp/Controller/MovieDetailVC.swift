@@ -7,7 +7,8 @@
 
 import UIKit
 import SVProgressHUD
-import FirebaseAnalytics
+import SDWebImage
+
 
 class MovieDetailVC: UIViewController {
     
@@ -24,81 +25,54 @@ class MovieDetailVC: UIViewController {
     @IBOutlet weak var genre: UILabel!
     @IBOutlet weak var director: UILabel!
     
+    var viewModel: MovieDetailViewModelProtocol! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
+    
     var movieName = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        SVProgressHUD.show()
-        self.getMovieDetail()
+        viewModel = MovieDetailViewModel()
+        viewModel.getMovieDetail(text: movieName)
     }
-    
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-     }
-      func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
-         getData(from: url) { data, response, error in
-             guard let data = data, error == nil else { return }
-             DispatchQueue.main.async() {
-                 completion(UIImage(data: data))
-             }
-         }
-         
-     }
-    func getMovieDetail() {
-        let clearString = movieName.replacingOccurrences(of: " ", with: "_", options: .literal, range: nil)
-        let postRequest = APIRequest(fullurl: "\(Config.API_URL)?t=\(clearString)&apikey=\(Config.API_KEY)")
-               postRequest.post(completion: { result in
-                   switch result {
-                   case .success(let jsonData):
-                       print("success")
-                    do {
-                        let movieData = try JSONDecoder().decode(MovieDetail.self, from: jsonData)
-                        DispatchQueue.main.async {
-                            SVProgressHUD.dismiss()
-                            self.name.text = movieData.Title
-                            self.year.text = movieData.Year
-                            self.plot.text = movieData.Plot
-                            self.awards.text = movieData.Awards
-                            self.language.text = movieData.Language
-                            self.country.text = movieData.Country
-                            self.actors.text = movieData.Actors
-                            self.imdbRating.text = movieData.imdbRating
-                            self.genre.text = movieData.Genre
-                            self.director.text = movieData.Director
-                            self.downloadImage(from: (URL(string: movieData.Poster) ?? URL(string: Config.DEFAULT_IMG))!) { (img) in
-                                self.poster.image = img
-                            }
-                            self.getFirebaseAnalytics(name: movieData.Title, year: movieData.Year, plot: movieData.Plot, award: movieData.Awards, language: movieData.Language, country: movieData.Country, actors: movieData.Actors, imdb: movieData.imdbRating, genre: movieData.Genre, director: movieData.Director)
-                        }
-                    }catch {
-                        SVProgressHUD.dismiss()
-                        self.showAlert(message: "Movie not found!")
-                    }
-                   case .failure(let error):
-                        SVProgressHUD.dismiss()
-                        self.showAlert(message: error.localizedDescription)
-                   }
-               })
-    }
-    
-    func getFirebaseAnalytics(name: String, year: String, plot: String, award: String, language: String, country: String, actors: String, imdb: String, genre: String, director: String) {
-        FirebaseAnalytics.Analytics.logEvent("detail_screen_viewed", parameters: [
-          AnalyticsParameterScreenName: "product_detail_view",
-            "movie_name": name,
-            "movie_year": year,
-            "movie_plot": plot,
-            "movie_awards": award,
-            "movie_language": language,
-            "movie_country": country,
-            "movie_actors": actors,
-            "movie_imdbRating": imdb,
-            "movie_genre": genre,
-            "movie_director": director,
-        ])
 
+    @IBAction func backAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension MovieDetailVC: MovieDetailDelegate {
+    func showProgress() {
+        SVProgressHUD.show()
+    }
+    
+    func dismissProgress() {
+        SVProgressHUD.dismiss()
+    }
+    
+    func setData(data: MovieDetail) {
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+            self.name.text = data.Title
+            self.year.text = data.Year
+            self.plot.text = data.Plot
+            self.awards.text = data.Awards
+            self.language.text = data.Language
+            self.country.text = data.Country
+            self.actors.text = data.Actors
+            self.imdbRating.text = data.imdbRating
+            self.genre.text = data.Genre
+            self.director.text = data.Director
+            self.poster.sd_setImage(with: URL(string: data.Poster), completed: nil)
+            
+        }
     }
     
     func showAlert(message: String) {
@@ -106,10 +80,7 @@ class MovieDetailVC: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
-    @IBAction func backAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    
     
 }
 
@@ -119,7 +90,7 @@ extension MovieDetailVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDetailCell") as! MovieDetailCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDetailCell", for: indexPath) 
         return cell
     }
     
